@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: DarwinSerif;
-    src: url("../fonts/DarwinSerif-Regular.woff");
+    src: url("../fonts/DarwinSerif-Regular.woff") format('woff');
 }
 
 .headings{
