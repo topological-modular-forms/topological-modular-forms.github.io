@@ -1,0 +1,123 @@
+<style>
+
+@font-face {}
+
+@font-face {
+    font-family: Boba;
+    font-weight: bold;
+    src: url("../fonts/boba/Boba\ Date.otf");
+}
+
+@font-face {
+    font-family: SoapyHandsBold;
+    font-weight: bold;
+    src: url("../fonts/soapy/SS Soapy Hands Bold.otf");
+}
+
+@font-face {
+    font-family: SoapyHands;
+    src: url("../fonts/soapy/SS Soapy Hands Regular.otf");
+}
+
+@font-face {
+    font-family: Neutra;
+    src: url("../fonts/main/NeutraText-Book.otf");
+}
+
+.headings{
+    font-family: "Neutra";
+    font-size: 24px;
+    float: center;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.title{
+    font-family: "SoapyHandsBold";
+    text-align: center;
+    font-size: 96px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.contact{
+    font-family: "SoapyHands";
+    font-size: 32px;
+    float: center;
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+body {
+    background-image: url('../images/bg.jpg');
+} 
+
+.align-center {
+    display: block;
+    margin: 0px auto;
+}
+
+img.main {
+    border: 1px solid #000000;
+}
+
+div.main {
+    font-family: "Neutra";
+    font-size: 24px;
+    float: center;
+    width: 800px;
+    margin: 0 auto;
+}
+
+div.ad {
+    padding-top: 20px;
+    margin: 0 auto;
+}
+
+div.footer {
+    clear: both;
+    height: 50px;
+    border-top: 1px;
+    width: 910px;
+}
+
+p.main {
+    text-indent: 20px;
+    line-height: 125%;
+}
+
+a:link {
+    color: #b80b0b;
+}
+
+a:visited {
+    color: #b80b0b;
+}
+
+a:hover {
+    color: #ff0000;
+}
+
+a:active {
+    color: #ff0000;
+}
+
+p.note {
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.small {
+    font-size: xx-small;
+}
+
+.ul-small-indent{
+    margin: 8px;
+    line-height:125%;
+}
+</style>
