@@ -3,29 +3,13 @@
 @font-face {}
 
 @font-face {
-    font-family: Boba;
-    font-weight: bold;
-    src: url("../fonts/boba/Boba\ Date.otf");
-}
-
-@font-face {
-    font-family: SoapyHandsBold;
-    font-weight: bold;
-    src: url("../fonts/soapy/SS Soapy Hands Bold.otf");
-}
-
-@font-face {
-    font-family: SoapyHands;
-    src: url("../fonts/soapy/SS Soapy Hands Regular.otf");
-}
-
-@font-face {
-    font-family: Neutra;
-    src: url("../fonts/main/NeutraText-Book.otf");
+    font-family: DarwinSerif;
+    font-weight: regular;
+    src: url("../fonts/DarwinSerif-Regular.woff");
 }
 
 .headings{
-    font-family: "Neutra";
+    font-family: "DarwinSerif";
     font-size: 24px;
     float: center;
     width: 800px;
@@ -33,21 +17,11 @@
 }
 
 .title{
-    font-family: "SoapyHandsBold";
+    font-family: "DarwinSerif";
     text-align: center;
     font-size: 96px;
     padding-top: 50px;
     padding-bottom: 100px;
-}
-
-.contact{
-    font-family: "SoapyHands";
-    font-size: 32px;
-    float: center;
-    width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    padding-bottom: 25px;
 }
 
 body {
