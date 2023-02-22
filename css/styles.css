@@ -3,12 +3,11 @@
 @font-face {}
 
 @font-face {
-    font-family: DarwinSerif;
-    src: url("../fonts/DarwinSerif-Regular.woff") format('woff');
+    font-family: 'Alegreya Sans', sans-serif;
 }
 
 .headings{
-    font-family: DarwinSerif;
+    font-family: 'Alegreya Sans', sans-serif;
     font-size: 24px;
     float: center;
     width: 800px;
@@ -16,7 +15,7 @@
 }
 
 .title{
-    font-family: DarwinSerif;
+    font-family: 'Alegreya Sans', sans-serif;
     text-align: center;
     font-size: 96px;
     padding-top: 50px;
@@ -37,8 +36,8 @@ img.main {
 }
 
 div.main {
-    font-family: DarwinSerif;
-    font-size: 26px;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 28px;
     float: center;
     width: 80%;
     margin: 0 auto;
@@ -94,4 +93,8 @@ p.note {
     margin: 8px;
     line-height:125%;
 }
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center
 </style>
