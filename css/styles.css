@@ -38,10 +38,11 @@ img.main {
 
 div.main {
     font-family: DarwinSerif;
-    font-size: 24px;
+    font-size: 26px;
     float: center;
     width: 80%;
     margin: 0 auto;
+    line-height: 125%;
 }
 
 div.ad {
