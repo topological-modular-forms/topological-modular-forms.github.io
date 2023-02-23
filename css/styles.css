@@ -96,5 +96,12 @@ p.note {
 .container {
     display: flex;
     align-items: center;
-    justify-content: center
+}
+
+.code {
+    font-family: 'Source Code Pro', monospace;
+    background: #E3E6E8;
+    border-radius: 10px;
+    color: #DF2041;
+}
 </style>
