@@ -48,13 +48,15 @@
 
         <p>Many of the “chapters” below were written long ago and need to be revised, both for typography as well as for style. For example, I recently changed the layout, and now there are many diagrams running off the page. I’m also planning to change the font of the document to one I’m currently working on in the future, and thus currently quite a few math symbols are just placeholders for symbols I’ll later draw.</p>
 
-        <p>To try to at least aid in making sense of which chapters are minimally useful and which aren’t, I’ve tried adding an “Organisation” rating to them below: 0 stars means the document is completely messy, whereas 5 stars means it is perfectly fine.</p>
+        <p>To try to at least aid in making sense of which chapters are minimally useful and which aren’t, I’ve added an “Organisation” rating to them below: 0 stars means the document is completely messy, whereas 5 stars means it is perfectly fine.</p>
 
         <p>In addition, about half of the chapters have no content besides the title and an “Other Chapters” section, being just “stubs” for topics I want to learn someday. These are marked as “(Stub)” below.</p>
 
+        <p>Also, although most of the notes is about well-known stuff, there are some new stuff in them as well, including also things which are known but not written down. I've tried highlighting things that might be of interest to others in the Description/Comments section in the table below.</p>
+
         <p>Lastly, Feel free to shoot me an email at <span class="code"><a href=mailto:emily.de.oliveira.santos.tmf@gmail.com">emily.de.oliveira.santos.tmf@gmail.com</a></span> in case you find errors―from typos to more serious errors like wrong statements/proofs―or have any comments―from things like contributing proofs or pointers to them, answers to questions or conjectures inside the notes, or really just saying hi―all of these and more are very welcome =)</p>
 
-        <div class="container"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Knuth%27s_dangerous_bend_symbol.svg" width="60"><div class="text"><b>Warning: </b>The notes below are very informal and contain many, many errors, so please use them at your own risk.</div></div>
+        <div class="container"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Knuth%27s_dangerous_bend_symbol.svg" width="60"><div class="text"><b>Warning: </b>The notes below are very informal and contain many, many errors, so please use them at your own risk. There are also lots of nonstandard terminology in them, so please keep this in mind as well while reading them.</div></div>
     </div>
     <div class="main">
         <table>
@@ -97,7 +99,7 @@
             <tr>
               <td><a href="PDFs/sets.pdf">Sets</a></td>
               <td>Sections 1 and 2 contain some stuff on ZFC, while Appendix A (and in particular the table on Section A.5) contain some material on viewing sets as categories enriched in truth values.</td>
-              <td style="text-align:center"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></td>
+              <td style="text-align:center"><span class="fa-regular fa-star checked"></span><span class="fa-regular fa-star checked"></span><span class="fa-regular fa-star checked"></span><span class="fa-regular fa-star checked"></span><span class="fa-regular fa-star checked"></span></td>
               <td style="text-align:center">25 pages</td>
             </tr>
             <tr>
@@ -132,20 +134,23 @@
               <td><a href="PDFs/relations.pdf">Relations</a></td>
               <td>This chapter contains:
                   <ul>
-                      <li>A discussion of relations, the categories they form, and categorical properties (<a href="PDFs/relations.pdf#tcb@cnt@tcbdefinition.1.6.1">Proposition 1.6.1</a>) of the (bi)category of relations (<a href="PDFs/relations.pdf#section.1">Section 1</a>);</li>
+                      <li>A basic discussion and definition of relations (<a href="PDFs/relations.pdf#subsection.1.1">Section 1.1</a>);</li>
+                      <li>How relations may be viewed as decategorification of profunctors (Remarks <a href="PDFs/relations.pdf#tcb@cnt@tcbdefinition.1.1.5">1.1.5</a> and <a href="PDFs/relations.pdf#tcb@cnt@tcbdefinition.1.1.6">1.1.6</a>)</li>
+                      <li>A discussion of the various kind of categories (a category, a monoidal category, a 2-category, a double category) that relations form (<a href="PDFs/relations.pdf#subsection.1.2">Sections 1.2 to 1.5</a>);</li>
+                      <li>The various categorical properties of the 2-category of relations, including self-duality, identifications of adjunctions in $\mathsf{Rel}$ with functions, of monads in $\mathsf{Rel}$ with preorders, of comonads in $\mathsf{Rel}$ with subsets, the partial co/completeness of $\mathsf{Rel}$, and its closedness, including how right Kan extensions and right Kan lifts exist in $\mathsf{Rel}$ (<a href="PDFs/relations.pdf#subsection.1.6">Section 1.6</a>);</li>
                       <li>A discussion of operations with relations, including graphs, domains, ranges, unions, intersections, products, inverse relations, composition of relations, and collages (<a href="PDFs/relations.pdf#section.2">Section 2</a>);</li>
-                      <li>A discussion of equivalence relations (<a href="PDFs/relations.pdf#section.3">Section 3</a>);</li>
+                      <li>A discussion of equivalence relations (<a href="PDFs/relations.pdf#section.3">Section 3</a>) and quotient sets (<a href="PDFs/relations.pdf#subsection.3.5">Section 3.5</a>);</li>
                       <li>A lengthy discussion of the adjoint pairs
                           \begin{align*}
                               R_{*} \dashv R_{-1} &\colon\mathcal{P}(A)\rightleftarrows\mathcal{P}(B),\\
                               R^{-1} \dashv R_{!} &\colon\mathcal{P}(B)\rightleftarrows\mathcal{P}(A)
                           \end{align*}
-                          of functors (morphisms of posets) between $\mathcal{P}(A)$ and $\mathcal{P}(B)$ induced by a relation $R\colon A\mathrel{\to\mkern-18mu|\mkern7mu}B$, and of the properties of $R_*$, $R_{-1}$, $R^{-1}$, and $R_!$ (<a href="PDFs/relations.pdf#section.4">Section 4</a>).
+                          of functors (morphisms of posets) between $\mathcal{P}(A)$ and $\mathcal{P}(B)$ induced by a relation $R\colon A\mathrel{\to\mkern-18mu|\mkern7mu}B$, along with a discussion of the properties of $R_*$, $R_{-1}$, $R^{-1}$, and $R_!$ (<a href="PDFs/relations.pdf#section.4">Section 4</a>).
 
-                          <p>These two pairs of adjoint functors are the counterpart of the adjoint triple $f_*\dashv f^{-1}\dashv f_!$ induced by a function $f\colon A\to B$ studied in <a href="PDFs/constructions-with-sets.pdf">Constructions With Sets</a>, and indeed we have $R_{-1}=R^{-1}$ if and only if $R$ is total and functional. Thus when $R$ comes from a function this pair of adjunctions reduces to the triple adjunction $f_*\dashv f^{-1}\dashv f_!$.</p>
+                          <p>These two pairs of adjoint functors are the counterpart for relations of the adjoint triple $f_*\dashv f^{-1}\dashv f_!$ induced by a function $f\colon A\to B$ studied in <a href="PDFs/constructions-with-sets.pdf">Constructions With Sets</a>, and indeed we have $R_{-1}=R^{-1}$ if and only if $R$ is total and functional. Thus when $R$ comes from a function this pair of adjunctions reduces to the triple adjunction $f_*\dashv f^{-1}\dashv f_!$.</p>
 
                           <p>The pairs $R_*\dashv R_{-1}$ and $R^{-1}\dashv R_!$ later make an appearance in the context of continuous, open, and closed relations between topological spaces (see the <a href="PDFs/topological-spaces.pdf#section.5">Relations Between Topological Spaces</a> section in the <a href="PDFs/topological-spaces.pdf">Topological Spaces</a> chapter).</p>
-                      <li>A discussion of spans and their relation to relations (<a href="PDFs/relations.pdf#section.5">Section 5</a>);</li>
+                      <li>A discussion of spans (<a href="PDFs/relations.pdf#section.5">Section 5</a>) and their relation to functions (<a href="PDFs/relations.pdf#tcb@cnt@tcbdefinition.5.2.1">Proposition 5.2.1</a>) and relations (Propositions <a href="PDFs/relations.pdf#tcb@cnt@tcbdefinition.5.3.1">5.3.1</a> and <a href="PDFs/relations.pdf#tcb@cnt@tcbdefinition.5.3.3">5.3.3</a> and Remark <a href="PDFs/relations.pdf#tcb@cnt@tcbdefinition.5.3.5">5.3.5</a>);
                       <li>A discussion of “hyperpointed sets” (<a href="PDFs/relations.pdf#section.6">Section 6</a>). I don’t know why I wrote this...</li>
                   </ul>
               </td>
@@ -156,15 +161,15 @@
               <td><a href="PDFs/posets.pdf">Posets</a></td>
               <td>This chapter contains:
                   <ul>
-                      <li>A discussion of posets, constructions with them, and limits inside them (<a href="PDFs/posets.pdf#section.1">Sections 1–4</a>);</li>
+                      <li>A discussion of posets, constructions with them, and co/limits inside posets (<a href="PDFs/posets.pdf#section.1">Sections 1–4</a>);</li>
                       <li>A discussion of so-called <i>relative preorders</i> from a set $X$ to a set $Y$. These are supposed to be an extension of the notion of a preorder $\preceq_X\colon X\mathrel{\to\mkern-18mu|\mkern7mu}X$ on a set $X$ but where we allow the source and target of $\preceq_X$ to be entirely different sets.
 
                           <p>The basic idea is that we may view preorders as precisely the monads in the bicategory $\mathsf{Rel}$ of relations, so <i>relative preorders</i> are to be defined as <i>relative</i> monads in $\mathsf{Rel}$ in the sense of <a href="https://ncatlab.org/nlab/show/relative+monad">nLab, relative monad</a>.</p>
 
-                          <p>If you’re interested in relative monads, you might like reading this section (<a href="PDFs/posets.pdf#appendix.1.A">Appendix A</a>).</p>
+                          <p>Thus, if you’re interested in relative monads, you might like reading <a href="PDFs/posets.pdf#appendix.1.A">Appendix A</a>.</p>
                   </ul>
               </td>
-              <td style="text-align:center"><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa-solid fa-star-half-stroke checked"></span><span class="fa fa-star"></span></td>
+              <td style="text-align:center"><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa-solid fa-star-half-stroke checked"></span><span class="fa-regular fa-star checked"></span></td>
               <td style="text-align:center">34 pages</td>
             </tr>
             <tr>
@@ -178,14 +183,37 @@
                       <li>A discussion of adjunctions (<a href="PDFs/categories.pdf#section.6">Section 6</a>).
 
                           <p>(P.S.: I wrote Section 6.3 a while ago just for fun; it is completely useless.)</p></li>
-                      <li>A discussion of the Yoneda lemma (<a href="PDFs/categories.pdf#section.7">Sections 7―8</a>).</li>
+                      <li>A discussion of the Yoneda lemma (<a href="PDFs/categories.pdf#section.7">Sections 7–8</a>).</li>
                       <li>Some miscellaneous material on a bunch of random things I have to either revise or push to somewhere else in the notes (<a href="PDFs/categories.pdf#appendix.1.A">Appendices A and B</a>).</li>
 
                           <p>(Please ignore them!)</p></li>
                   </ul>
               </td>
-              <td style="text-align:center"><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span></td>
+              <td style="text-align:center"><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa-regular fa-star checked"></span></td>
               <td style="text-align:center">116 pages</td>
+            </tr>
+            <tr>
+              <td><a href="PDFs/constructions-with-categories.pdf">Constructions With Categories</a></td>
+              <td>This chapter contains:
+                  <ul>
+                      <li>A discussion of co/limits, 2-co/limits, some weighted 2-co/limits, pseudo co/limits, lax co/limits, and oplax co/limits of categories, all with very explicit descriptions (<a href="PDFs/constructions-with-categories.pdf#section.1">Sections 1–6</a>);</li>
+                      <li> A discussion of deloopings of monoids, classifying spaces of categories, opposite categories, categories of pointed objects (i.e. $\mathbb{E}_{0}$-monoids), joins, arrow categories, the funny tensor product, and the category of simplices of a category (<a href="PDFs/constructions-with-categories.pdf#section.7">Section 7</a>);</li>
+                      <li> A discussion of endomorphisms, automorphisms, involutions, idempotent morphisms, and the categories they form (<a href="PDFs/constructions-with-categories.pdf#section.8">Section 8</a>);</li>
+                      <li> A discussion of slice categories (<a href="PDFs/constructions-with-categories.pdf#section.9">Section 9</a>);</li>
+                      <li> A discussion of coslice categories (<a href="PDFs/constructions-with-categories.pdf#section.10">Section 10</a>);</li>
+                      <li> A discussion of quotients of categories (<a href="PDFs/constructions-with-categories.pdf#section.11">Section 11</a>), where:</li>
+                      <ul>
+                          <li>In <a href="PDFs/constructions-with-categories.pdf#subsection.11.1">Section 11.1</a> we discuss a notion (I made up) of the quotient of a category by a profunctor (to be thought of as a categorified relation);</li>
+                          <li>In <a href="PDFs/constructions-with-categories.pdf#subsection.11.2">Section 11.2</a> we discuss the usual notion of a quotient of a category by a congruence relation on morphisms;</li>
+                          <li>In <a href="PDFs/constructions-with-categories.pdf#subsection.11.3">Section 11.3</a> we discuss the notion of a quotient of a category by a <i>generalised</i> congruence relation, introduced in <a href="http://www.tac.mta.ca/tac/volumes/1999/n11/5-11abs.html">[Bednarczyk–Borzyszkowski–Pawlowski]</a>;</li>
+                          <li>In <a href="PDFs/constructions-with-categories.pdf#subsection.11.4">Section 11.4</a> we define generalised congruence relations in a two-step process, first defining the quotient $\mathcal{C}/\mathord{\simeq}$ of a category $\mathcal{C}$ by a congruence relation $\mathord{\simeq}$ on objects, and then defining a generalised congruence relation to be a congruence relation on objects $\mathord{\simeq}$ together with a (classical) congruence relation $\mathord{\sim}$ on $\mathcal{C}/\mathord{\simeq}$.</li>
+                      </ul>
+                      <li> A discussion of Gabriel–Zisman localisations (<a href="PDFs/constructions-with-categories.pdf#section.12">Section 12</a>);</li>
+                      <li> A discussion of Karoubi envelopes (<a href="PDFs/constructions-with-categories.pdf#section.13">Section 13</a>).</li>
+                  </ul>
+              </td>
+              <td style="text-align:center"><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa-solid fa-star-half-stroke checked"></span></td>
+              <td style="text-align:center">174 pages</td>
             </tr>
             <tr>
               <td><a href="PDFs/mess.pdf">The whole thing</a></td>
@@ -219,7 +247,7 @@
                       <li>Index of Topology</li>
                   </ul>
                   </p></td>
-              <td style="text-align:center"><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></td>
+              <td style="text-align:center"><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa-regular fa-star checked"></span><span class="fa-regular fa-star checked"></span><span class="fa-regular fa-star checked"></span></td>
               <td style="text-align:center">9229 pages</td>
             </tr>
         </table>
