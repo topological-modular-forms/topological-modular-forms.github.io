@@ -1,7 +1,3 @@
-<style>
-
-@font-face {}
-
 @font-face {
     font-family: 'Alegreya Sans', sans-serif;
 }
@@ -13,18 +9,6 @@
     width: 800px;
     margin: 0 auto;
 }
-
-.title{
-    font-family: 'Alegreya Sans', sans-serif;
-    text-align: center;
-    font-size: 96px;
-    padding-top: 50px;
-    padding-bottom: 100px;
-}
-
-body {
-    background-image: url('../images/bg.jpg');
-} 
 
 .align-center {
     display: block;
@@ -93,10 +77,6 @@ p.note {
     margin: 8px;
     line-height:125%;
 }
-.container {
-    display: flex;
-    align-items: center;
-}
 
 .code {
     font-family: 'Source Code Pro', monospace;
@@ -104,4 +84,121 @@ p.note {
     border-radius: 10px;
     color: #DF2041;
 }
-</style>
+.container {
+  width: 600px;
+  justify-content: center;
+  align-items: center;
+  margin: 0em auto 0em auto;
+}
+body {
+    background-image: url('../images/bg.jpg');
+} 
+.title{
+    font-family: 'Alegreya Sans', sans-serif;
+    text-align: center;
+    font-size: 30pt;
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+p {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 15pt;
+}
+.section-title {
+    font-family: 'Alegreya Sans', sans-serif;
+    color: RGB(181,29,0);
+    text-align: center;
+    font-size: 20pt;
+}
+.clowder-svg {
+    background-color: #fee2bb;
+}
+li {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 15pt;
+    margin-bottom: 10pt;
+}
+.idea-btn {
+  background-color: #999999; /* Green background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding around the text */
+  border: none; /* No border */
+  cursor: pointer; /* Cursor changes to pointer to indicate it's clickable */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Text size */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effects */
+}
+
+.idea-btn:hover {
+  background-color: #555555; /* Darker shade of green on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.idea-content {
+  visibility: hidden; /* Hide content initially */
+  opacity: 0; /* Make content transparent */
+  height: 0; /* Start with 0 height to collapse content */
+  transition: opacity 0.5s, height 0s 0.5s, padding 0s 0.5s; /* Transition for opacity and delay the height and padding transitions */
+  overflow: hidden; /* Ensures content outside of the current height is not visible */
+  padding: 0 10px; /* Start with 0 vertical padding */
+}
+
+/* Style for expanded content */
+.idea-content.expanded {
+  visibility: visible; /* Make content visible */
+  opacity: 1; /* Make content fully opaque */
+  padding-top: 10px; /* Add vertical padding for visual appeal */
+  padding-bottom: 10px; /* Add vertical padding for visual appeal */
+  transition: opacity 0.5s, height 0.5s ease-out, padding 0.5s ease-out; /* Smooth transition for expanding */
+}
+
+.section {
+  display: none; /* Start with sections hidden */
+  opacity: 0; /* Start with sections fully transparent */
+  transform: translateY(20px); /* Start with sections slightly lower */
+  transition: opacity 0.5s, transform 0.5s; /* Smooth transition for opacity and position */
+}
+
+.section.show {
+  display: block; /* Show section */
+  opacity: 1; /* Make section fully opaque */
+  transform: translateY(0); /* Move section to its final position */
+}
+
+/* Example style to indicate the active link */
+.active {
+  color: red;
+}
+
+/* Style for the navigation list container */
+#navigation {
+  list-style-type: none; /* Removes the default list bullet points */
+  margin: 0; /* Removes the default margin */
+  padding: 0; /* Removes the default padding */
+  display: flex; /* Displays the list items in a row */
+  justify-content: space-around; /* Evenly spaces the list items */
+  background-color: #333; /* Sets a background color for the navigation bar */
+}
+
+/* Style for each navigation item */
+#navigation li {
+  display: block; /* Makes sure the list items are treated as block elements */
+  padding: 14px 20px; /* Adds some padding for spacing around the text */
+  margin: 0; /* Removes the default margin */
+  color: white; /* Sets the text color to white */
+  text-align: center; /* Centers the text */
+  text-decoration: none; /* Removes the default underline from links */
+  cursor: pointer; /* Changes the cursor to a pointer when hovering over the items */
+}
+
+/* Adds a hover effect to navigation items */
+#navigation li:hover {
+  background-color: #ddd; /* Changes the background color when hovering */
+  color: black; /* Changes the text color when hovering */
+}
+
+/* Example style to indicate the active link */
+.active {
+  background-color: #04AA6D; /* Sets a different background color for the active link */
+  color: white; /* Ensures the text color remains white */
+}

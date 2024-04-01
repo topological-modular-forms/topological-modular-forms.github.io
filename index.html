@@ -10,14 +10,151 @@
      <style>
         @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
     </style> 
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        // Add click event listener to all "Idea" buttons
+        document.querySelectorAll('.idea-btn').forEach(function(button) {
+          button.addEventListener('click', function() {
+            // Find the next sibling element, which is the idea-content div
+            var content = this.nextElementSibling;
+
+            // Toggle the display style to show/hide the content
+            if (content.style.display === "none") {
+              content.style.display = "block";
+            } else {
+              content.style.display = "none";
+            }
+          });
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll('.idea-btn').forEach(function(button) {
+          button.addEventListener('click', function() {
+            var content = this.nextElementSibling;
+      
+            if (content.classList.contains('expanded')) {
+              // Collapse the content
+              content.style.height = 0; // Reset the height
+              content.classList.remove('expanded');
+            } else {
+              // Expand the content
+              content.style.height = content.scrollHeight + "px"; // Set the height to its natural height
+              content.classList.add('expanded');
+            }
+          });
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const navigationItems = document.querySelectorAll('#navigation li');
+        const sections = document.querySelectorAll('.section');
+      
+        navigationItems.forEach(item => {
+          item.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-target');
+            const targetSection = document.getElementById(targetId);
+      
+            // Hide all sections and remove 'show' class
+            sections.forEach(section => {
+              section.style.display = 'none';
+              section.classList.remove('show');
+            });
+      
+            // Remove active class from all items
+            navigationItems.forEach(item => {
+              item.classList.remove('active');
+            });
+      
+            // Use setTimeout to allow for the display change before adding the class that starts the animation
+            targetSection.style.display = 'block';
+            setTimeout(() => targetSection.classList.add('show'), 0);
+      
+            // Add 'active' class to clicked item
+            this.classList.add('active');
+          });
+        });
+      });
+    </script>
 </head>
 <body>
-    <div><p class="title">Emily’s Homepage</p></div>
-
-    <div class="main">
-        <h1 class="main center"><a href=./papers.html>Papers</a></h1>
-        <h1 class="main center"><a href=./notes.html>Notes</a></h1>
-        <h1 class="main center"><a href=./fonts.html>Fonts</a></h1>
+    <div class="container">
+        <p class="title">Emily’s Homepage</p>
+        <p>Welcome to my webpage! My name is Emily (she/her), and this is my homepage. Below you'll find my work on mathematics and type design.</p>
+        <br>
+        <!-- Navigation List -->
+        <ul id="navigation">
+          <li data-target="typeface">Darwin Typeface</li>
+          <li data-target="clowder">The Clowder Project</li>
+          <li data-target="papers">Papers</li>
+          <li data-target="contact">Contact</li>
+        </ul>
+        <br>
+        <!-- Sections -->
+        <div id="typeface" class="section">
+            <div class="section-title"><b>The Darwin Typeface Project</b></div>
+            <p>I'm currently working on Darwin, a free and open-source typeface for scientific and academic writing:</p>
+            <img align="center" src="./images/darwin.svg" alt="The Darwin Typeface Project" width="100%">
+            <p>You can find more details about Darwin at its <a href="https://github.com/topological-modular-forms/Darwin-Typeface">GitHub repository</a> or <a href="https://topological-modular-forms.github.io/darwin-webpage">website</a>.</p>
+        </div>
+        <div id="clowder" class="section">
+            <div class="section-title"><b>The Clowder Project</b></div>
+            <p>I'm also developing <a href="https://topological-modular-forms.github.io/the-clowder-project">The Clowder Project</a>, an online resource and reference for category theory based on <a href="https://gerby-project.github.io/">Gerby</a>:</p>
+            <p align="center"><img align="center" src="./images/clowder5.png" alt="The Clowder Project" width="100%"></p>
+            <p>The project is meant to become essentially an Stacks Project for category theory, though it will eventually also include some material in other areas. See the <a href="https://topological-modular-forms.github.io/the-clowder-project">project website</a> for more details.</p>
+        </div>
+        <div id="papers" class="section">
+            <div class="section-title"><b>Papers</b></div>
+            <p>Below you'll find some of the papers I've written or am currently working on:</p>
+            <ul>
+                <li><i>Coends of Higher Arity</i>, joint with <a href="https://tetrapharmakon.github.io/">Fosco Loregian</a>. DOI: <a href="https://doi.org/10.1007/s10485-021-09653-x">https://doi.org/10.1007/s10485-021-09653-x</a>. arXiv: <a href="https://arxiv.org/abs/2011.13881">arXiv:2011.13881</a>.<br>
+                    <button class="idea-btn">Description</button>
+                    <div class="idea-content" style="display:none;">
+                        <p>In this paper, we define and study a generalisation of co/ends for functors of the form $F\colon(\mathcal{C}^{\mathsf{op}})^{p}\times\mathcal{C}^{q}\to\mathcal{D}$.</p>
+                    </div>
+                <li><i>Weighted Category Theory (in preparation)</i>, joint with <a href="https://tetrapharmakon.github.io/">Fosco Loregian</a>.<br>
+                    <button class="idea-btn">Description</button>
+                    <div class="idea-content" style="display:none;">
+                        <p>In this paper, we study weighted variants of classical notions and constructions found in category theory, moving beyond the theory of weighted co/limits.</p>
+                        <p>This gives rise to a number of interesting objects, such as weighted natural transformations, weighted ends, weighted Kan extensions, weighted adjunctions, and weighted monads.</p>
+                    </div>
+                <li><i>Diagonal Category Theory (in preparation)</i>, joint with <a href="https://tetrapharmakon.github.io/">Fosco Loregian</a>.<br>
+                    <button class="idea-btn">Description</button>
+                    <div class="idea-content" style="display:none;">
+                        <p>In this paper, we pursue a similar idea to the one in <i>Weighted Category Theory</i>, investigating analogues of classical notions and constructions in category theory obtained by replacing universality with respect to natural transformations by universality with respect to <i>dinatural</i> transformations.</p>
+                        <p>This idea, which mimicks the passage from co/limits to co/ends, gives rise to a number of interesting notions and objects, such as diagonal adjunctions, diagonal Kan extensions, and diagonal monads.</p>
+                        <p>Furthermore, equipped with the theory developed in <i>Weighted Category Theory</i>, we also define and study “higher diagonal” analogues of natural transformations, leading us to an $\mathbb{N}$-graded composition law assembling together natural, dinatural, and higher diagonal natural transformations.</p>
+                        <p>This leads us to a conceptual solution of the compositionality problem for dinatural transformations―a problem which has plagued category theorists since the introduction of dinatural transformations in the early 70s―as we show the reason dinatural transformations fail to compose is solely because they are just the degree 1 part of a more general $\mathbb{N}$-graded composition law.</p>
+                    </div>
+            </ul>
+        </div>
+        <div id="contact" class="section">
+            <div class="section-title"><b>Contact</b></div>
+            <p>You can contact me at the following places:</p>
+            <ul>
+                <li>Email: <a href="mailto:emily.de.oliveira.santos.tmf@gmail.com">emily.de.oliveira.santos.tmf@gmail.com</a>.
+                <li>Discord: You can contact me using my username, "emily_yui".
+                <li><a href="https://typedrawers.com/profile/4836/Emily%20de%20Oliveira%20Santos">TypeDrawers</a>
+                <li><a href="https://github.com/topological-modular-forms">GitHub</a>
+                <li><a href="https://twitter.com/emily_etale">Twitter</a>
+                <li><a href="https://mathstodon.xyz/@emily_etale">Mathstodon</a>
+                <li><a href="https://categorytheory.zulipchat.com/#user/276871">Category Theory Zulip</a>
+            </ul>
+            <p>You can also find me on <a href="https://mathoverflow.net/users/130058/emily">MathOverflow</a>.</p>
+        </div>
     </div>
 </body>
 </html>
