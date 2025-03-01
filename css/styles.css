@@ -104,6 +104,12 @@ p {
     font-family: 'Alegreya Sans', sans-serif;
     font-size: 15pt;
 }
+.subsection-title {
+    font-family: 'Alegreya Sans', sans-serif;
+    color: RGB(181,29,0);
+    text-align: center;
+    font-size: 16pt;
+}
 .section-title {
     font-family: 'Alegreya Sans', sans-serif;
     color: RGB(181,29,0);
