@@ -8,11 +8,12 @@
     <meta property="og:title" content="Emily de Oliveira Santos">
     <meta property="og:description" content="Project Operations at Surge AI. Co-author of Humanity's Last Exam (Nature) and FrontierMath.">
     <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:url" content="https://topological-modular-forms.github.io/">
+    <link rel="canonical" href="https://topological-modular-forms.github.io/">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Alegreya+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,700;1,400&family=Alegreya+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Alegreya+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
     <script>
     MathJax = {
       tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
@@ -25,10 +26,10 @@
 
         body {
             font-family: 'Alegreya Sans', sans-serif;
-            color: #1a1a1a;
-            background: #fff;
-            line-height: 1.65;
-            font-size: 18px;
+            color: #2a2a2a;
+            background: #fcfbf9;
+            line-height: 1.6;
+            font-size: 17px;
             margin: 0;
             padding: 0;
             -webkit-font-smoothing: antialiased;
@@ -36,74 +37,102 @@
 
         main {
             margin: 0;
-            padding: 80px 24px 100px 80px;
+            padding: 72px 24px 100px 80px;
         }
 
         .intro, section:not(.has-margin-note) {
             max-width: 500px;
         }
 
+        /* ── Name ── */
         h1 {
-            font-size: 28px;
+            font-family: 'Alegreya', serif;
+            font-size: 27px;
             font-weight: 700;
-            margin: 0 0 28px 0;
-            line-height: 1.3;
+            margin: 0 0 36px 0;
+            line-height: 1.2;
+            letter-spacing: -0.3px;
+            color: #1a1a1a;
         }
 
-        .intro { margin-bottom: 48px; }
-        .intro p { margin: 0 0 16px 0; }
+        /* ── Intro ── */
+        .intro { margin-bottom: 40px; }
+        .intro p { margin: 0 0 12px 0; }
 
-        .press {
-            font-size: 16px;
-            color: #666;
-            font-style: italic;
-        }
-
+        /* ── Section headers ── */
         h2 {
             font-family: 'Alegreya Sans SC', 'Alegreya Sans', sans-serif;
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 700;
-            letter-spacing: 1.5px;
-            color: #888;
-            margin: 0 0 0 0;
-            margin-bottom: 10px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #e8e8e8;
+            letter-spacing: 1px;
+            color: #999;
+            margin: 0 0 10px 0;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e0ddd8;
         }
 
-        section { margin-bottom: 12px; }
+        section { margin-bottom: 28px; }
 
-        a { color: #a50b0b; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        /* ── Links ── */
+        a { color: #9b1b1b; text-decoration: none; }
+        a:hover { color: #c42020; text-decoration: underline; }
 
-        p { font-size: 18px; margin: 0 0 16px 0; }
+        /* ── Body text ── */
+        p { font-size: 17px; margin: 0 0 14px 0; }
 
         ul { list-style: none; margin: 0; padding: 0; }
-        li { margin-bottom: 16px; font-size: 18px; line-height: 1.5; }
+        li { margin-bottom: 14px; font-size: 17px; line-height: 1.55; }
 
         .item-title { font-weight: 700; }
-        .item-meta { color: #555; font-size: 16px; }
+        .item-meta { color: #666; font-size: 14px; line-height: 1.5; }
 
+        /* ── Expandable abstracts ── */
         details { margin-top: 4px; }
         summary {
             cursor: pointer;
-            color: #888;
-            font-size: 15px;
+            color: #999;
+            font-size: 13px;
             user-select: none;
+            letter-spacing: 0.3px;
         }
-        summary:hover { color: #555; }
+        summary:hover { color: #666; }
 
         .detail-body {
-            margin-top: 8px;
-            padding-left: 16px;
-            border-left: 2px solid #e8e8e8;
-            color: #444;
+            margin-top: 6px;
+            padding-left: 14px;
+            color: #555;
+            position: relative;
         }
-        .detail-body p { font-size: 16px; margin: 0 0 8px 0; }
+        .detail-body::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e0ddd8;
+            transform-origin: top;
+            transform: scaleY(0);
+        }
+        details[open] .detail-body {
+            animation: detail-reveal 0.3s ease-out;
+        }
+        details[open] .detail-body::before {
+            transform: scaleY(1);
+            transition: transform 0.15s ease-out;
+        }
+        .detail-body p { font-size: 14px; margin: 0 0 6px 0; line-height: 1.55; }
 
-        .bulleted { list-style: disc; padding-left: 24px; }
+        @keyframes detail-reveal {
+            from { opacity: 0; transform: translateY(-4px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ── Bulleted lists ── */
+        .bulleted { list-style: disc; padding-left: 22px; }
         .bulleted li { margin-bottom: 8px; }
 
+        /* ── Margin notes ── */
         .has-margin-note .section-body {
             min-width: 0;
         }
@@ -111,41 +140,49 @@
         .margin-note {
             font-size: 13px;
             line-height: 1.45;
-            color: #666;
+            color: #888;
             align-self: start;
+            padding-left: 20px;
+            border-left: 1px solid #e0ddd8;
         }
-        .margin-note .item-title { font-size: 13px; }
-        .margin-note .item-meta { font-size: 12px; }
-        .margin-note details { margin-top: 2px; }
-        .margin-note summary { font-size: 13px; }
-        .margin-note .detail-body p { font-size: 13px; }
+        .margin-note .item-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #666;
+        }
+        .margin-note .item-meta { font-size: 12px; color: #888; }
+        .margin-note details { margin-top: 3px; }
+        .margin-note summary { font-size: 12px; }
+        .margin-note .detail-body { padding-left: 0; }
+        .margin-note .detail-body::before { display: none; }
+        .margin-note .detail-body p { font-size: 12px; color: #888; }
 
-        .contact-list li { margin-bottom: 8px; }
+        .contact-list li { margin-bottom: 6px; font-size: 16px; }
 
-        @media (max-width: 840px) {
+        /* ── Narrow: inline margin notes ── */
+        @media (max-width: 839px) {
             .has-margin-note {
                 display: block;
-                max-width: 600px;
+                max-width: 500px;
             }
             .margin-note {
-                margin-top: 20px;
-                padding-left: 16px;
-                border-left: 2px solid #e8e8e8;
-                font-size: 15px;
+                margin-top: 16px;
+                font-size: 14px;
             }
-            .margin-note .item-title { font-size: 15px; }
-            .margin-note .item-meta { font-size: 14px; }
-            .margin-note summary { font-size: 14px; }
-            .margin-note .detail-body p { font-size: 14px; }
+            .margin-note .item-title { font-size: 14px; }
+            .margin-note .item-meta { font-size: 13px; }
+            .margin-note summary { font-size: 13px; }
+            .margin-note .detail-body p { font-size: 13px; }
         }
 
+        /* ── Wide: side-by-side grid ── */
         @media (min-width: 840px) {
             .has-margin-note {
                 display: grid;
-                grid-template-columns: 500px 250px;
-                column-gap: 30px;
-                row-gap: 8px;
-                max-width: 780px;
+                grid-template-columns: 500px 240px;
+                column-gap: 36px;
+                row-gap: 6px;
+                max-width: 776px;
             }
             .has-margin-note h2 {
                 grid-column: 1 / -1;
@@ -153,10 +190,15 @@
             }
         }
 
+        /* ── Small screens ── */
         @media (max-width: 640px) {
-            main { padding: 40px 20px 60px 20px; }
-            h1 { font-size: 24px; }
-            body { font-size: 17px; }
+            main { padding: 36px 20px 60px 20px; }
+            h1 { font-size: 28px; }
+            body { font-size: 16px; }
+            p, li { font-size: 16px; }
+            .intro, section:not(.has-margin-note) {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -165,14 +207,26 @@
         <h1>Emily de Oliveira Santos</h1>
 
         <div class="intro">
-            <p>I work in project operations at <a href="https://www.surgehq.ai/">Surge AI</a>. My background is in pure mathematics, specifically category theory. I co-authored <a href="https://doi.org/10.1038/s41586-025-09962-4">Humanity's Last Exam</a>, published in <em>Nature</em>, and contributed problems to <a href="https://arxiv.org/abs/2411.04872">FrontierMath</a>.</p>
-            <p class="press">Forthcoming profiles in the Financial Times and the Sunday Times.</p>
+            <p>I work in project operations at <a href="https://www.surgehq.ai/">Surge AI</a>. My background is in pure mathematics, specifically category theory. I co-authored <a href="https://doi.org/10.1038/s41586-025-09962-4">Humanity's Last Exam</a>, published in <a href="https://doi.org/10.1038/s41586-025-09962-4"><em>Nature</em></a>, and contributed problems to <a href="https://arxiv.org/abs/2411.04872">FrontierMath</a>.</p>
         </div>
+
+        <section>
+            <h2>Press</h2>
+            <p>I occasionally give interviews about my work.</p>
+            <ul>
+                <li>
+                    <span class="item-title"><a href="https://www.thetimes.com/business/technology/article/fact-check-ai-artificial-intelligence-silicon-valley-s5sxfmdgw">Interviewed for <em>The Sunday Times</em></a></span>
+                    <br><span class="item-meta">On Surge AI and the data-labelling industry.</span>
+                </li>
+            </ul>
+        </section>
 
         <section class="has-margin-note">
             <h2>FrontierMath</h2>
             <div class="section-body">
-                <p><a href="https://arxiv.org/abs/2411.04872">FrontierMath</a> is a benchmark of exceptionally challenging mathematics problems covering most major branches of modern mathematics. I was one of the major contributors of problems and share authorship on the paper. My contributions include problems at the <a href="https://epoch.ai/frontiermath/tiers-1-4/about">Tier 4</a> level — research-grade problems created through several-week research projects by mathematics professors and postdocs, representing the most extreme difficulty level in the benchmark.</p>
+                <p><a href="https://arxiv.org/abs/2411.04872">FrontierMath</a> is a benchmark of exceptionally challenging mathematics problems covering most major branches of modern mathematics. Problems in this dataset require PhD+ level expertise and take mathematicians several hours — or even days — to solve.</p>
+                <p>A few months after FrontierMath's initial release, <a href="https://epoch.ai/">Epoch AI</a> announced an extension of the project called <a href="https://epoch.ai/frontiermath/tiers-1-4/about">FrontierMath (Tier 4)</a>. Problems in this set were created through several-week research projects by mathematics professors and postdocs, representing the most extreme difficulty level in the benchmark.</p>
+                <p>I was one of the major contributors of problems across all tiers of FrontierMath, including Tier 4. I am also a co-author of the paper.</p>
             </div>
             <aside class="margin-note">
                 <span class="item-title">FrontierMath: A Benchmark for Evaluating Advanced Mathematical Reasoning in AI</span>
@@ -208,21 +262,7 @@
         </section>
 
         <section>
-            <h2>Projects</h2>
-            <ul>
-                <li>
-                    <span class="item-title"><a href="https://www.clowderproject.com/">The Clowder Project</a></span>
-                    <br><span class="item-meta">An online reference for category theory, aiming to become a Stacks Project for the field.</span>
-                </li>
-                <li>
-                    <span class="item-title"><a href="https://github.com/The-EPL-Type-Foundry/Hundar">Hundar</a></span>
-                    <br><span class="item-meta">A free and open-source typeface for scientific and academic writing (formerly Darwin). <a href="https://hundartypeface.com/">Website</a>.</span>
-                </li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Earlier Research</h2>
+            <h2>Research</h2>
             <ul>
                 <li>
                     <span class="item-title">Coends of Higher Arity</span>
@@ -260,9 +300,24 @@
         </section>
 
         <section>
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <span class="item-title"><a href="https://www.clowderproject.com/">The Clowder Project</a></span>
+                    <br><span class="item-meta">An online reference for category theory, aiming to become a Stacks Project for the field.</span>
+                </li>
+                <li>
+                    <span class="item-title"><a href="https://github.com/The-EPL-Type-Foundry/Hundar">Hundar</a></span>
+                    <br><span class="item-meta">A free and open-source typeface for scientific and academic writing (formerly Darwin). <a href="https://hundartypeface.com/">Website</a>.</span>
+                </li>
+            </ul>
+        </section>
+
+        <section>
             <h2>Contact</h2>
             <ul class="contact-list">
-                <li><a href="mailto:emily.de.oliveira.santos.tmf@gmail.com">emily.de.oliveira.santos.tmf@gmail.com</a></li>
+                <li><a href="mailto:emily.de.oliveira.santos.tmf@gmail.com">Email</a></li>
+                <li><a href="https://www.linkedin.com/in/emily-de-oliveira-santos-89355b261/">LinkedIn</a></li>
                 <li><a href="https://github.com/topological-modular-forms">GitHub</a></li>
                 <li><a href="https://mathstodon.xyz/@emily_etale">Mathstodon</a></li>
                 <li><a href="https://mathoverflow.net/users/130058/emily">MathOverflow</a></li>
